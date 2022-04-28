@@ -1,0 +1,126 @@
+p,a,h1,h2,h3,h4 {
+	margin: 0;
+	padding: 0;
+}
+
+.card {
+    border: #001E6C 2px solid;
+	margin-top: 15px;
+	padding: 15px;
+    padding-bottom: 20px;
+	background-color: #f7f5ec;
+	border-radius: 10px;
+    height: 200px;
+    width: 400px;
+}
+
+.card .person-img {
+    position: relative;
+    right:0;
+    margin: auto;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    border: 4px dashed transparent;
+    transition: padding .3s;
+    
+    grid-area: 1 / 1 / 4 / 4;
+}
+
+.card .person-img img {
+	width: 100%;
+    border-radius: 50%;
+}
+
+.card .person-info {
+    grid-area: 4 / 1 / 5 / 4;
+}
+
+.card .person-info .full-name {
+	margin-bottom: 10px;
+	font-size: 28px;
+    font-weight: 700; 
+    position: relative;
+    text-align: right;
+    right:75px;
+}
+
+.card .person-info .designation {
+    text-align: right;
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+    right:75px;
+}
+
+
+img, .person-img {
+    border-radius: 50%;
+    height:100px;
+    width:100px;
+    object-fit: contain;
+}
+
+/* hover animations */
+.card:hover {   
+    background: linear-gradient(to right, #016cec, #00b5f7);
+}
+
+.card:hover .full-name,
+.card:hover .designation {
+	color: #fff;
+    position: relative;
+     
+    right:20px;
+    transition: left 0.7s;
+}
+
+.card:hover .person-img {
+    transition: right 1s    ;
+    border: 5px dashed #fff ;
+    transition: 0.3s;
+    padding:12px;
+    right: 25px;
+    
+}
+
+
+/* socials css*/
+.card .social {
+    padding: 0; 
+    margin: 5px auto;
+    display: none;
+    max-width: 60%;  
+}
+
+.card:hover .social {
+    display: flex;
+    flex-direction: column;
+    flex-basis: initial;
+    row-gap: 10px;
+    text-align: center;
+    grid-area: 1 / 4 / 5 / 5;
+}
+
+.card .social li {
+    list-style-type: none;
+    display: inline;
+    background-color: #fff;
+    border-radius: 3px;
+}
+
+.card .social li a {
+    text-decoration: none;
+    padding: 5px;
+    color: #1785eb;
+    transition: all 0.3s ease 0s;
+    font-size: 20px;
+}
+
+/* grid alignment */
+.grid-container {
+    display: grid;
+grid-template-columns: repeat(4, 100px);
+grid-template-rows: repeat(4, 50px);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+    }
