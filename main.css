@@ -36,7 +36,7 @@ p,a,h1,h2,h3,h4 {
 
 .card .person-info {
     grid-area: 4 / 1 / 5 / 4;
-    text-align: center;
+    text-align: left;
 }
 
 .card .person-info .full-name {
@@ -44,14 +44,14 @@ p,a,h1,h2,h3,h4 {
 	font-size: 28px;
     font-weight: 700; 
     position: relative;
-    right:0px;
+    left:50px;
 }
 
 .card .person-info .designation {
     font-size: 20px;
     font-weight: 500;
     position: relative;
-    right:0px;
+    left:50px;
 }
 
 img, .person-img {
@@ -71,7 +71,7 @@ img, .person-img {
 .card:hover .person-img {
     transition: right 1s ease-out;
     border:4px dashed #fff;
-    transition: 0.3s;
+    transition: 0.5s;
     padding:8px;
     right: 30px;
 }
@@ -80,8 +80,8 @@ img, .person-img {
 .card:hover .designation {
 	color: #fff;
     position: relative;
-    right:30px;
-    transition: right 0.7s ease-out;
+    left:15px;
+    transition: left 0.7s ease-out;
 }
 
 /* socials css*/
@@ -131,17 +131,18 @@ img, .person-img {
 }
 
 .card .person-img a { 
-    font-size: 100px;
+    font-size: 80px;
     text-decoration: none;
     position: relative;
-    left:120px;
-    bottom: 40px;
+    left:150px;
+    bottom: 7px;
 }
 
 .card:hover .person-img a {
     color: #fff;
-font-size: 50px;
-position: relative;
-bottom: -20spx;
-transition: all 0.5s ease-out;
+    font-size: 50px;
+    position: relative;
+    left:120px;
+    bottom: -20px;
+    transition: all 0.5s ease-out;
 }
